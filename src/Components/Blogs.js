@@ -52,7 +52,7 @@ function Blogs() {
                     <div className="col p-4 d-flex flex-column position-static">
                         <strong className="d-inline-block mb-2 text-primary">{capitalizeFirstLetter(blogPost.category)}</strong>
                         <h3 className="mb-0">{blogPost.title}</h3>
-                        <div className="mb-1 text-muted">{blogPost.month} {blogPost.day}</div>
+                        <div className="mb-1 text-muted">{blogPost.month}/{blogPost.day}</div>
                         <p className="card-text mb-auto">{blogPost.excerpt}</p>
                         <Link to={`/blog/${blogPost.slug}`} className="stretched-link">Continue reading</Link>
                     </div>
