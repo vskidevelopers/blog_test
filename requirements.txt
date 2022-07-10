@@ -10,6 +10,7 @@ Django==4.0.5
 django-allauth==0.50.0
 django-cors-headers==3.13.0
 django-crispy-forms==1.14.0
+django-heroku==0.3.1
 django-summernote==0.8.20.0
 djangorestframework==3.13.1
 idna==3.3
