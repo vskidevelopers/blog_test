@@ -54,7 +54,7 @@ function Blogs() {
                         <h3 className="mb-0">{blogPost.title}</h3>
                         <div className="mb-1 text-muted">{blogPost.month}/{blogPost.day}</div>
                         <p className="card-text mb-auto">{blogPost.excerpt}</p>
-                        <Link to={`/blog/${blogPost.slug}`} className="stretched-link">Continue reading</Link>
+                        <Link to={`/blog/${blogPost.id}`} className="stretched-link">Continue reading</Link>
                     </div>
                     <div className="col-auto d-none d-lg-block">
                         <img width='200' height='250' src={blogPost.thumbnail} alt='thumbnail' />
