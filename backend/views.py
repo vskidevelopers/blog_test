@@ -13,12 +13,6 @@ class BlogView(viewsets.ModelViewSet):
     serializer_class=BlogSerializer
     queryset = BlogPost.objects.all()
 
-    # def retrieve(self, request, *args, **kwargs):
-    #     queryset = BlogPost.objects.all().filter(featured=True)
-    #     blog=get_object_or_404(queryset)
-    #     serializer =BlogSerializer(blog)
-    #     return Response(serializer.data)
-
 class FeaturesViewSet(viewsets.ReadOnlyModelViewSet):
     queryset = BlogPost.objects.all().filter(featured=True)
     serializer_class=BlogSerializer
@@ -31,6 +25,6 @@ class Assets(View):
 
         if os.path.isfile(path):
             with open(path, 'rb') as file:
-                return HttpResponse(file.read(), content_type='application/javascript')
+                return HttpResponse(file.read(), content_type='application/json')
         else:
             return HttpResponseNotFound()
