@@ -10,7 +10,7 @@ function Blogs() {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const res = await axios.get("/api/featured");
+                const res = await axios.get("/api/featured/");
                 setFeaturedBlog(res.data[0]);
                 console.log(res.data)
             }
