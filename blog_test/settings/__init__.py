@@ -1,6 +1,6 @@
-from .productions import *
+# from .productions import *
 
-# try: 
-#     from .local import *
-# except:
-#     pass
+try: 
+    from .local import *
+except:
+    pass
