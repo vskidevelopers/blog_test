@@ -15,7 +15,7 @@ function Blogs() {
                 console.log(res.data)
             }
             catch (err) {
-
+                console.log(err)
             }
         }
 
@@ -29,7 +29,7 @@ function Blogs() {
                 setBlogs(res.data);
             }
             catch (err) {
-
+                console.log(err)
             }
         }
 
