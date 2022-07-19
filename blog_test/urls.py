@@ -26,7 +26,7 @@ router.register(r'blogs', views.BlogView, 'blog')
 router.register(r'featured', views. FeaturesViewSet, 'featured')
 
 urlpatterns = [
-    path('', views.index, name='index'),
+    # path('', views.index, name='index'),
     path('admin/', admin.site.urls),
     path('summernote/', include('django_summernote.urls')),
     path('api/', include(router.urls)),
