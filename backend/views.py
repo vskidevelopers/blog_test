@@ -7,8 +7,13 @@ from django.views import View
 from django.http import HttpResponse, HttpResponseNotFound
 import os
 
+from django.views.generic import TemplateView
+from django.views.decorators.cache import never_cache
+
 # Create your views here.
 
+# Serve Single Page Application
+index = never_cache(TemplateView.as_view(template_name='index.html'))
 class BlogView(viewsets.ModelViewSet):
     serializer_class=BlogSerializer
     queryset = BlogPost.objects.all()
